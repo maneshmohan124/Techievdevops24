@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "testing the build"
+            }
+
+            post {
+                always {
+                echo "testing the post method"
+              }
+            }
+            
+        }
+    }
+
+}
